@@ -1,0 +1,15 @@
+{{title}}
+<div class="container">
+    <input #box (keyup)="onKey(box.value)" disabled type="text" placeholder="0" value="{{value}}" class="input"><br>
+    <button (click)="addZero()" class="zero">0</button>
+    <button (click)="addOne()" class="one">1</button>
+    <button (click)="plus()" class="plus">+</button>
+    <button (click)="minus()" class="minus">-</button>
+</div>
+{{value}}
+<br>
+{{this.value[this.value.length-1]}}
+<br>
+{{values[0]}}
+
+
