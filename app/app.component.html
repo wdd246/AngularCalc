@@ -1,6 +1,6 @@
 <h1>{{title}}</h1>
 <div class="container">
-    <input #box (change)="onChange($event)" disabled type="text" placeholder="0" value="{{value}}" class="input"><br>
+    <input #box (change)="onChange($event)" (keypress)="onPress($event)" type="text" placeholder="0" value="{{value}}" class="input"><br>
     <button (click)="addZero()" class="zero">0</button>
     <button (click)="addOne()" class="one">1</button>
     <button (click)="plus()" class="plus">+</button>
@@ -12,11 +12,11 @@
   <h4>History</h4>
     <ul>
       <li *ngFor="let value of values">
-        {{value}}<span style="font-size: 10px;">(2)</span>
+        {{value}}<span *ngIf='value!="-" && value!="+"' style="font-size: 10px;">(2)</span>
       </li>
     </ul>
     <hr>
-  <li>{{value}}<span *ngIf='value!=""' style="font-size: 10px;">(2)</span></li>
+  <li>{{value}}<span *ngIf='value!="" || value!="-" || value!="+"' style="font-size: 10px;">(2)</span></li>
   <li *ngIf='dec!=null'>{{dec}}<span style="font-size: 10px;">(10)</span></li>
 </div>
 <footer>

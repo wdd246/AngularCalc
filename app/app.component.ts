@@ -12,8 +12,14 @@ export class AppComponent {
   dec:any;
   x:any;
 
-  onChange(event) {
-    this.value = event.target.value;
+  onPress(event) {
+    if(event.key!=="0" && event.key!=="1"){
+      event.preventDefault();
+    }
+  }
+
+  onChange(event){
+    this.value = event.target.value
   }
 
   addOne(){
