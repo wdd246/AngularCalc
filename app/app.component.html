@@ -3,22 +3,27 @@
     <input #box (change)="onChange($event)" (keypress)="onPress($event)" type="text" placeholder="0" value="{{value}}" class="input"><br>
     <button (click)="addZero()" class="zero">0</button>
     <button (click)="addOne()" class="one">1</button>
+    <button (click)="clear()" class="submit">C</button>
     <button (click)="plus()" class="plus">+</button>
     <button (click)="minus()" class="minus">-</button><br>
-    <button (click)="clear()" class="c">C</button>
+    <!-- <button (click)="clear()" class="c">C</button> -->
+    <button (click)="mult()" class="c">*</button>
+    <button (click)="div()" class="c">/</button>
+    <button (click)="pow()" class="c">^</button>
+    <button (click)="sqrt()" class="c">sqrt</button>
     <button (click)="submit()" class="submit">=</button>
 </div>
 <div class="history" *ngIf="values.length>0">
   <h4>History</h4>
     <ul>
       <li *ngFor="let value of values">
-        {{value}}<span *ngIf='value!="-" && value!="+"' style="font-size: 10px;">(2)</span>
+        {{value}}<span *ngIf='value!="-" && value!="+" && value!="*" && value!="/" && value!="^"' style="font-size: 10px;">(2)</span>
       </li>
     </ul>
     <hr>
-  <li>{{value}}<span *ngIf='value!="" || value!="-" || value!="+"' style="font-size: 10px;">(2)</span></li>
+  <li>{{value}}<span *ngIf='value!="" || value!="-" || value!="+" || value!="*" || value!="/" || value!="^"' style="font-size: 10px;">(2)</span></li>
   <li *ngIf='dec!=null'>{{dec}}<span style="font-size: 10px;">(10)</span></li>
 </div>
 <footer>
-  Copyrights &copy; 2019 <a href="www.mansio.pl" >Adam Małota</a> 
+  Copyrights &copy; 2019 <a href="https://www.mansio.pl">Adam Małota</a> 
 </footer>
