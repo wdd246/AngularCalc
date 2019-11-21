@@ -6,14 +6,12 @@ body,html{
 *{
     font-family: 'Lato', sans-serif !important;
 }
-
 h1{
     text-align: center;
     font-size: 70px;
     color: #27ae60
 
 }
-
 .container,.history{
     margin: 0 auto;
     
@@ -29,16 +27,16 @@ h1{
 .history{
     border-radius: 0px 0px 5px 5px;
     padding: 5px 20px 20px 20px;
+    height: fit-content;
 }
-.plus,.minus,.submit{
-    float: right;
-    
+.history>li{
+    padding-left: 40px;
 }
 .submit{
     width: 90px;
+    float: right;
 }
 button{
-    //border: 1px solid black;
     border:none;
     background: white;
     margin: 5px;
@@ -48,7 +46,6 @@ button{
     font-size: 20px;
     padding: 10px;
     line-height: 20px;
-   //border-radius:5px; 
     background-color: #ecf0f1;
     cursor: pointer;
 }
@@ -62,7 +59,6 @@ input{
     padding: 5px;
     margin: 0 auto;
     display: block;
-    //border-radius:5px; 
     color: #27ae60;
     background-color: #ecf0f1;
     font-family: monospace !important;
@@ -76,12 +72,6 @@ button:hover{
 ul,li{
     list-style-type: none;
 }
-.history{
-    height: fit-content;
-}
-.history>li{
-    padding-left: 40px;
-}
 li{
     font-size: 20px;
 }
@@ -92,7 +82,6 @@ footer{
     margin: 0;
     background-color:#27ae60;
     width: 100%;
-    //line-height: 30px;
     text-align: center;
     clear: both;
     position: fixed;

@@ -58,10 +58,10 @@ export class AppComponent {
           this.x=this.values[i-2]*this.values[i]
           //console.log(this.x)
         }
-        if(this.values[i-1]=='/' && this.values[i]!=0){
-          this.x=this.values[i-2]/this.values[i]
-          //console.log(this.x)
-        }
+        // if(this.values[i-1]=='/' && this.values[i]!=0){
+        //   this.x=this.values[i-2]/this.values[i]
+        //   //console.log(this.x)
+        // }
         if(this.values[i-1]=='^' && this.values[i]!=0){
           this.x=Math.pow(this.values[i-2],this.values[i]);
           //console.log(this.x)
@@ -107,15 +107,15 @@ export class AppComponent {
     }
   }
 
-  div(){
-    if(this.values[this.values.length-1]!='-' && this.values[this.values.length-1]!='+' && this.values[this.values.length-1]!='*' && this.values[this.values.length-1]!='/' && this.values[this.values.length-1]!='^') {
-      this.value +='/';
-      this.getBinAndClear()
-    }
-    else{
-      this.value
-    }
-  }
+  // div(){
+  //   if(this.values[this.values.length-1]!='-' && this.values[this.values.length-1]!='+' && this.values[this.values.length-1]!='*' && this.values[this.values.length-1]!='/' && this.values[this.values.length-1]!='^') {
+  //     this.value +='/';
+  //     this.getBinAndClear()
+  //   }
+  //   else{
+  //     this.value
+  //   }
+  // }
 
   pow(){
     if(this.values[this.values.length-1]!='-' && this.values[this.values.length-1]!='+' && this.values[this.values.length-1]!='*' && this.values[this.values.length-1]!='/' && this.values[this.values.length-1]!='^') {
